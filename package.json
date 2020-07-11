@@ -4,7 +4,8 @@
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha server/**/*.test.js",
+    "test-watch": "nodemon --exec \"npm run test\"",
     "start": "node server/server.js",
     "dev": "nodemon server/server.js"
   },
@@ -14,6 +15,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "expect": "^26.1.0",
+    "mocha": "^8.0.1",
     "nodemon": "^2.0.4"
   },
   "dependencies": {
